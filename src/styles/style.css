@@ -14,7 +14,7 @@ html {
   --color-white-5: rgba(255, 255, 255, 0.05);
   --color-primary: #fdc000;
   --color-hover: #f86a05;
-  ---color-area: #1c212e;
+  --color-area: #1c212e;
 }
 
 body {
@@ -22,4 +22,35 @@ body {
   font-family: "Roboto", sans-serif;
   line-height: 1.4;
   background-color: var(--color-black);
+}
+
+.button {
+  height: 50px;
+  padding: 0 20px;
+
+  border: none;
+  border-radius: 4px;
+  outline: none;
+
+  color: var(--color-white);
+  font-size: 14px;
+  font-weight: 700;
+
+  background-color: var(---color-area);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: var(--color-hover);
+}
+
+.button-primary {
+  background-color: var(--color-primary);
+  color: var(--color-black);
+}
+
+.button-primary:hover {
+  background-color: var(--color-hover);
+  color: var(--color-white);
 }
