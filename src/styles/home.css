@@ -1,0 +1,25 @@
+.home-container {
+  max-width: 1120px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+.headline {
+  margin-bottom: 40px;
+}
+
+.headline-title {
+  font-size: 80px;
+  font-family: "Oswald", sans-serif;
+  line-height: 1;
+
+  margin-bottom: 40px;
+}
+
+.headline-primary {
+  color: var(--color-primary);
+}
+
+.headline-desc {
+  color: var(--color-white-30);
+}
