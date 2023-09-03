@@ -18,6 +18,7 @@ export default class ViewMore extends Component {
     this.element.classList.add("button", "view-more", "hide");
     this.element.textContent = "View more...";
     this.element.addEventListener("click", async () => {
+      this.element.classList.add("hide");
       await searchMovies(movieStore.state.page + 1);
     });
   }
