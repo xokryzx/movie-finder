@@ -8,12 +8,16 @@ export default class MovieList extends Component {
     movieStore.subscribe("movies", () => {
       this.render();
     });
+    movieStore.subscribe("loading", () => {
+      this.render();
+    });
   }
 
   render() {
     this.element.classList.add("movie-list");
     this.element.innerHTML = `
       <div class="movies"></div>
+      <div class="the-loader hide"></div>
     `;
 
     const movies = this.element.querySelector(".movies");
@@ -22,5 +26,10 @@ export default class MovieList extends Component {
         (movie) => new MovieItem({ movie }).element
       )
     );
+
+    const loader = this.element.querySelector(".the-loader");
+    movieStore.state.loading
+      ? loader.classList.remove("hide")
+      : loader.classList.add("hide");
   }
 }
