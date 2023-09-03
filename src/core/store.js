@@ -1,7 +1,7 @@
 export default class Store {
   constructor(state) {
     this.state = {};
-    this.observer = {};
+    this.observers = {};
     for (const key in state) {
       Object.defineProperty(this.state, key, {
         get: () => state[key],
