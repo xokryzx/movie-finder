@@ -1,5 +1,6 @@
 import Component from "../core/component";
 import movieStore from "../store/movie";
+import MovieItem from "./MovieItem";
 
 export default class MovieList extends Component {
   constructor() {
@@ -16,6 +17,10 @@ export default class MovieList extends Component {
     `;
 
     const movies = this.element.querySelector(".movies");
-    movies.append();
+    movies.append(
+      ...movieStore.state.movies.map(
+        (movie) => new MovieItem({ movie }).element
+      )
+    );
   }
 }
