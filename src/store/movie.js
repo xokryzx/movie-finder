@@ -19,16 +19,20 @@ export const searchMovies = async (page) => {
     store.state.message = "";
   }
 
-  const res = await fetch(
-    `https://omdbapi.com?apikey=7035c60c&s=${store.state.searchText}&page=${page}`
-  );
-  const { Response, Search, totalResults, Error } = await res.json();
-  if (Response === "True") {
-    store.state.movies = [...store.state.movies, ...Search];
-    store.state.maxPage = Math.ceil(Number(totalResults) / 10);
-  } else {
-    store.state.message = Error;
+  try {
+    const res = await fetch(
+      `https://omdbapi.com?apikey=7035c60c&s=${store.state.searchText}&page=${page}`
+    );
+    const { Response, Search, totalResults, Error } = await res.json();
+    if (Response === "True") {
+      store.state.movies = [...store.state.movies, ...Search];
+      store.state.maxPage = Math.ceil(Number(totalResults) / 10);
+    } else {
+      store.state.message = Error;
+    }
+  } catch (error) {
+    console.log(error);
+  } finally {
+    store.state.loading = false;
   }
-
-  store.state.loading = false;
 };
