@@ -1,0 +1,46 @@
+.movie-container {
+  display: flex;
+  gap: 70px;
+
+  max-width: 1120px;
+  margin: auto;
+  padding: 40px 0;
+
+  color: var(--color-white-50);
+}
+
+.poster {
+  flex-shrink: 0;
+
+  --width: 500px;
+  width: var(--width);
+  height: calc(var(--width) * 3 / 2);
+
+  border-radius: 10px;
+  background-size: cover;
+  background-color: var(--color-area);
+}
+
+.desc {
+  flex-grow: 1;
+}
+
+.title {
+  margin-bottom: 30px;
+
+  color: var(--color-white);
+  font-size: 70px;
+  font-family: "Oswald", sans-serif;
+  line-height: 1;
+}
+
+.labels {
+  color: var(--color-primary);
+}
+
+.detail-title {
+  margin: 24px 0 6px;
+  color: var(--color-white);
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+}
