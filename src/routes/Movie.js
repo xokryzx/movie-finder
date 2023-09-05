@@ -3,11 +3,20 @@ import movieStore, { getMovieDetails } from "../store/movie";
 
 export default class Movie extends Component {
   async render() {
+    this.element.classList.add("movie-container");
+    this.element.innerHTML = `
+      <div class="poster skeleton"></div>
+      <div class="desc">
+        <div class="title skeleton"></div>
+        <div class="labels skeleton"></div>
+        <div class="plot skeleton"></div>
+      </div>
+    `;
+
     await getMovieDetails(history.state.id);
     const { movie } = movieStore.state;
     const bigPoster = movie.Poster.replace("SX300", "SX700");
 
-    this.element.classList.add("movie-container");
     this.element.innerHTML = `
       <div
         style = "background-image: url(${bigPoster})"

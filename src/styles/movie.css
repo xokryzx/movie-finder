@@ -34,8 +34,22 @@
   line-height: 1;
 }
 
+.title.skeleton {
+  height: 70px;
+}
+
 .labels {
+  margin-bottom: 20px;
   color: var(--color-primary);
+}
+
+.labels.skeleton {
+  height: 30px;
+}
+
+.plot.skeleton {
+  width: 80%;
+  height: 400px;
 }
 
 .detail-title {
