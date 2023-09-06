@@ -3,7 +3,7 @@ import movieStore, { getMovieDetails } from "../store/movie";
 
 export default class Movie extends Component {
   async render() {
-    this.element.classList.add("movie-container");
+    this.element.classList.add("container", "movie-container");
     this.element.innerHTML = `
       <div class="poster skeleton"></div>
       <div class="desc">

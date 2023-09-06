@@ -6,7 +6,7 @@ import ViewMore from "../components/ViewMore";
 
 export default class Home extends Component {
   render() {
-    this.element.classList.add("home-container");
+    this.element.classList.add("container");
 
     const headline = new Headline().element;
     const search = new Search().element;

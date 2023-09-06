@@ -1,0 +1,74 @@
+.header {
+  display: flex;
+  align-items: flex-end;
+  gap: 40px;
+
+  padding: 20px 40px;
+  background-color: rgba(14, 17, 27, 0.9);
+
+  position: sticky;
+  top: 0;
+  z-index: 9;
+}
+
+.logo {
+  color: var(--color-white-50);
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  text-decoration: none;
+}
+
+.logo-primary {
+  color: var(--color-primary);
+}
+
+.menu-list {
+  display: flex;
+  gap: 14px;
+}
+
+.menu-link {
+  color: var(--color-white-50);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.menu-link.active {
+  color: var(--color-primary);
+}
+
+.user {
+  width: 40px;
+  height: 40px;
+  margin: auto;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 40px;
+
+  background: url(../../images/user-image.png) center/cover;
+  border-radius: 50%;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.user:hover {
+  transform: scale(1.2);
+}
+
+.footer {
+  padding: 40px 40px 60px;
+  text-align: center;
+}
+
+.footer-link {
+  color: var(--color-white-20);
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}

@@ -5,7 +5,7 @@ export default class About extends Component {
   render() {
     const { name, email, github } = aboutStore.state;
 
-    this.element.classList.add("about-container");
+    this.element.classList.add("container");
     this.element.innerHTML = `
       <div class="photo"></div>
       <p class="name user-info">${name}</p>

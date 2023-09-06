@@ -1,11 +1,6 @@
 .movie-container {
   display: flex;
   gap: 70px;
-
-  max-width: 1120px;
-  margin: auto;
-  padding: 40px 0;
-
   color: var(--color-white-50);
 }
 
