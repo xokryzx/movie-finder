@@ -10,6 +10,12 @@
   margin-bottom: 40px;
 }
 
+@media (max-width: 600px) {
+  .headline-title {
+    font-size: 60px;
+  }
+}
+
 .headline-primary {
   color: var(--color-primary);
 }

@@ -53,3 +53,22 @@
   font-size: 20px;
   font-family: "Oswald", sans-serif;
 }
+
+@media (max-width: 1200px) {
+  .movie-container {
+    gap: 30px;
+  }
+  .poster {
+    --width: 300px;
+  }
+}
+
+@media (max-width: 720px) {
+  .movie-container {
+    display: block;
+  }
+  .title {
+    font-size: 50px;
+    margin-top: 50px;
+  }
+}
