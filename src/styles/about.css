@@ -1,0 +1,35 @@
+.about-container {
+  max-width: 1120px;
+  margin: auto;
+  padding: 40px 0 60px;
+}
+
+.photo {
+  width: 230px;
+  height: 230px;
+  margin: 0 auto 20px;
+
+  border-radius: 10px;
+  background: url(../../images/user-image.png) center/cover;
+}
+
+.name {
+  font-size: 40px;
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 20px;
+}
+
+.user-info {
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.user-link {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.user-link:hover {
+  text-decoration: underline;
+}

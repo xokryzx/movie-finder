@@ -1,5 +1,6 @@
 @import "./home.css";
 @import "./movie.css";
+@import "./about.css";
 
 * {
   box-sizing: border-box;
